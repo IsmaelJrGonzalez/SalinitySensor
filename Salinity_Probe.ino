@@ -9,8 +9,8 @@
  * A2  - reading the voltage off the copper plate #1
  * A3  - reading the voltage off the copper plate #2
  *
- *  2  - simulating an AC current across copper plate #1
- *  3  - simulating an AC current across copper plate #2
+ * 12  - simulating an AC current across copper plate #1
+ * 13  - simulating an AC current across copper plate #2
  */
  
  // determines if print statements are compiled and ran
