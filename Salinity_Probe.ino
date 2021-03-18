@@ -18,12 +18,12 @@
 
 // motor pins
 Servo servo;					// motor for droping and raising conductivity & temperature probes
-const unsigned int motorPin = 3;		// the pwm pin that allows the arduino to communicate with the motor
-const unsigned int controllerPin = A0;		// dictates how fast or slow the motor spins and what direction
+const unsigned int motorPin = 11;		// the pwm pin that allows the arduino to communicate with the motor
+const unsigned int controllerPin = A1;		// dictates how fast or slow the motor spins and what direction
 unsigned int currentState = 90;			// speed/direction of motor 90 = still, <90 = move <-, >90 = move ->
 
 // temperature probe pins
-const unsigned temperaturePin = A1;		// allows use to read voltage from the temperature voltage divider
+const unsigned temperaturePin = A0;		// allows use to read voltage from the temperature voltage divider
 
 void setup() 
 {
@@ -68,7 +68,7 @@ void updateMotor(const unsigned int controllerPin, Servo& servo, unsigned int& c
 	if(newState != currentState)
 	{
 		servo.write(currentState);
-		currentState = currentState;
+		currentState = newState;
 		delay(200);
 	}
 }
