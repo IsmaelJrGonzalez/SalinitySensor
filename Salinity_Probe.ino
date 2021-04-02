@@ -85,6 +85,16 @@ void loop()
 	Serial.print("Conductivity Probe: ");
 	Serial.print(getConductivity());
 	Serial.print("\t");
+	
+	//instantiate after calibrating
+  double ADCCode; 
+  double slope;
+  double intercept;
+  
+//  double salinity = slope / (ADCCode - intercept);
+//  Serial.print("Salinity: ");
+//  Serial.print(salinity);
+//	Serial.print("\n");
 
 	// Motor state
 	Serial.print("Motor: ");
